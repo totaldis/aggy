@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aggy the Instagram Aggregator</title>
+	<link rel="stylesheet" href="content/styles/site.css">
+</head>
+<body>
+	<header>
+		<!-- <nav>
+			<button class="button" click="refreshItems()">refresh</button>
+		</nav> -->
+	</header>
+	<div class="centered">
+		<section id="allItems">
+			<div id="top"></div>
+			<div data-bind="foreach: { 
+			data: collection,
+			afterAdd: showLatestItem
+		}">
+		<article data-bind="attr: { id: id }" class="centered item">
+			<img data-bind="attr: { src: images.standard_resolution.url }" class="centered itemImg" />
+			<div class="profilePhoto">
+				<img data-bind="attr: { src: caption.from.profile_picture }" />
+			</div>
+			<div class="comment">
+				<span data-bind="text: caption.from.full_name" class="title"></span>
+				<span data-bind="text: caption.text"></span>
+			</div>
+			<div class="clear"></div>
+			<ul data-bind="foreach: comments.data" class="comments centered">
+				<li>
+					<div class="profilePhoto">
+						<img data-bind="attr: { src: from.profile_picture }" />
+					</div>
+					<div class="comment">
+						<span data-bind="text: from.full_name" class="userName"></span>
+						<span data-bind="text: text"></span>
+					</div>
+					<div class="clear"></div>
+				</li>
+			</ul>
+		</article>
+	</div>
+</section> 
+</div>
+</body>
+</html>
+<script src="scripts/vendor/jquery-2.0.3.min.js"></script>
+<script src="scripts/vendor/knockout-3.0.0.js"></script>
+<script src="scripts/vendor/knockout.mapping-latest.js"></script>
+<script src="scripts/aggy.config.js"></script>
+<script src="scripts/aggy.model.js"></script>
+<script src="scripts/aggy.utils.js"></script>
+
+<script>
+
+	if (window.location.hash) {
+		aggy.config.tokenId = aggy.utils.getHashParam(document.URL, 'access_token');
+		aggy.utils.getAllItems().then(function () {
+			aggy.utils.interval(aggy.utils.moveSlider, aggy.config.sliderTimer);
+			aggy.utils.interval(aggy.utils.getLatestItem, aggy.config.updateTimer);
+		});
+	} else {
+		aggy.utils.authorizeUser();
+	}
+	$('body').toggleClass('noScroll');
+
+	$('body').click(function () {
+		$(this).toggleClass('noScroll');
+	});
+
+</script>
