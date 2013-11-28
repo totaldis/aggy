@@ -16,13 +16,26 @@
 	"buffers":
 	[
 		{
-			"contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>Aggy the Instagram Aggregator</title>\n	<link rel=\"stylesheet\" href=\"content/styles/site.css\">\n</head>\n<body>\n	<header>\n		<!-- <nav>\n			<button class=\"button\" click=\"refreshItems()\">refresh</button>\n		</nav> -->\n	</header>\n	<div class=\"centered\">\n		<section id=\"allItems\">\n		<div data-bind=\"foreach: collection\">\n			<article class=\"centered item\" id=\"item1\">\n				<img src=\"http://distilleryimage2.s3.amazonaws.com/67a6aa1054a811e3a7030abda766a197_8.jpg\" alt=\"\" class=\"photo centered\">\n				<div class=\"title\">Snowey Falls</div>\n				<ul class=\"comments centered\">\n					<li>\n						<div class=\"profilePhoto\"></div>\n						<span class=\"comment\"><span class=\"userName\">{{ username }}</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nulla, animi, sint, laborum quia soluta optio repudiandae officia magni quis nihil tempore architecto. Voluptates modi in recusandae necessitatibus dicta culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, alias, expedita, ut sit minima itaque qui aut soluta beatae maxime quam vitae eius modi quia distinctio. Itaque mollitia quod quidem!</span><div class=\"clear\"></div>\n					</li>\n					<li>\n						<div class=\"profilePhoto\"></div>\n						<span class=\"comment\"><span class=\"userName\">{{ username }}</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nulla, animi, sint, laborum quia soluta optio repudiandae officia magni quis nihil tempore architecto. Voluptates modi in recusandae necessitatibus dicta culpa.</span><div class=\"clear\"></div>\n					</li>\n				</ul>\n			</article>\n			</div>\n		</section> \n	</div>\n</body>\n</html>\n<script src=\"scripts/vendor/jquery-2.0.3.min.js\"></script>\n<script src=\"scripts/vendor/knockout-3.0.0.js\"></script>\n<script src=\"scripts/vendor/knockout.mapping-latest.js\"></script>\n<script src=\"scripts/aggy.config.js\"></script>\n<script src=\"scripts/aggy.model.js\"></script>\n<script src=\"scripts/aggy.utils.js\"></script>\n\n<script>\n\nif (window.location.hash) {\n	aggy.config.tokenId = aggy.utils.getHashParam(document.URL, 'access_token');\n\n	aggy.utils.getAllItems().then(function () {\n		aggy.utils.interval(aggy.utils.moveSlider, aggy.config.sliderTimer);\n	});\n\n	// aggy.utils.getAllItems();\n\n	// setTimeout(function () {\n	// 	aggy.utils.interval(aggy.utils.moveSlider, aggy.config.sliderTimer);\n	// }, 10000); // wait timer until promise create for getAllItems\n} else {\n	aggy.utils.authorizeUser();\n}\n\n\n</script>",
 			"file": "index.html",
-			"file_size": 2506,
-			"file_write_time": 130300488590075066,
 			"settings":
 			{
-				"buffer_size": 2493,
+				"buffer_size": 2429,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/aggy.model.js",
+			"settings":
+			{
+				"buffer_size": 489,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "content/styles/site.less",
+			"settings":
+			{
+				"buffer_size": 2268,
 				"line_ending": "Windows"
 			}
 		},
@@ -30,7 +43,7 @@
 			"file": "scripts/aggy.utils.js",
 			"settings":
 			{
-				"buffer_size": 2770,
+				"buffer_size": 2761,
 				"line_ending": "Windows"
 			}
 		},
@@ -38,7 +51,7 @@
 			"file": "scripts/aggy.config.js",
 			"settings":
 			{
-				"buffer_size": 722,
+				"buffer_size": 752,
 				"line_ending": "Windows"
 			}
 		}
@@ -267,15 +280,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2493,
+						"buffer_size": 2429,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1642,
-								1642
+								1308,
+								1568
 							]
 						],
 						"settings":
@@ -388,26 +401,26 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "scripts/aggy.utils.js",
+					"file": "scripts/aggy.model.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2770,
+						"buffer_size": 489,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2770,
-								2770
+								314,
+								314
 							]
 						],
 						"settings":
@@ -520,7 +533,271 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 345.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "content/styles/site.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1533,
+								1533
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1072.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scripts/aggy.utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2038,
+								2038
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 765.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -532,20 +809,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "scripts/aggy.config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 722,
+						"buffer_size": 752,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								722,
-								722
+								752,
+								752
 							]
 						],
 						"settings":
@@ -694,7 +971,7 @@
 		"cols":
 		[
 			0.0,
-			0.689703808181,
+			0.579689703809,
 			1.0
 		],
 		"rows":
